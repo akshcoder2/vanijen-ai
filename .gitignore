@@ -1,0 +1,15 @@
+.env
+
+__pycache__/
+*.wav
+
+*.zip
+
+widget.preference
+
+.venv/
+build/
+dist/
+*.spec
+
+assets/vaani/*.mp4
