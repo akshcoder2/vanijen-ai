@@ -1,0 +1,18 @@
+name: Build Windows desktop app
+on:
+  workflow_dispatch:
+jobs:
+  package:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Build windowed executable with approved assets
+        shell: cmd
+        run: Build-Windows-App.bat
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Vanijen-AI-Windows
+          path: dist/Vanijen AI/
